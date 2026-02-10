@@ -1,0 +1,162 @@
+:root {
+  --bg: #0b1220;
+  --panel: #020617;
+  --primary: #2563eb;
+  --secondary: #22c55e;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.hero {
+  background: linear-gradient(135deg, #020617, #0b1220);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: var(--muted);
+  margin-bottom: 25px;
+}
+
+.hero-buttons .btn {
+  margin: 5px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background: var(--primary);
+}
+
+.btn-secondary {
+  background: var(--secondary);
+  color: #022c22;
+}
+
+section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--panel);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.4);
+  text-align: center;
+}
+
+.card span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  text-align: center;
+}
+
+.step {
+  background: var(--panel);
+  padding: 20px;
+  border-radius: 14px;
+}
+
+.price {
+  background: var(--panel);
+  padding: 20px;
+  border-radius: 14px;
+  margin-bottom: 15px;
+}
+
+.note {
+  color: var(--muted);
+  text-align: center;
+}
+
+footer {
+  background: #020617;
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: #022c22;
+  padding: 15px 18px;
+  border-radius: 50px;
+  font-weight: bold;
+  box-shadow: 0 10px 20px rgba(0,0,0,.4);
+}
+
+.card, .step {
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.card:hover, .step:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,.6);
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  section {
+    padding: 40px 15px;
+  }
+
+  .whatsapp {
+    bottom: 15px;
+    right: 15px;
+    padding: 12px 15px;
+  }
+}
